@@ -1,11 +1,11 @@
 node {
     
     stage('Descargar fuentes') {
-        git credentialsId: 'joaquin121416@gmail.com', url: 'D:\DevOps\facturacion-web'
+        git credentialsId: 'joaquin121416@gmail.com', url: 'D:/DevOps/facturacion-web'
     }
 
     stage('Compilar') {
-        bat 'mvn -f facturacion-web/pom.xml clean compile'
+        bat 'mvn  clean compile'
     }
     
     stage('Pruebas Unitarias') {
