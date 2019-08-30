@@ -10,7 +10,7 @@ node {
     
     stage('Pruebas Unitarias') {
         
-        bat 'mvn -f facturacion-web/pom.xml test'
+        bat 'mvn  test'
         
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/*.xml'])
         
