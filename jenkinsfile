@@ -1,7 +1,7 @@
 node {
     
     stage('Descargar fuentes') {
-        git credentialsId: 'alt.carlos@gmail.com', url: 'https://github.com/ch4rl1/jbgroup-devops-facturacion.git'
+        git credentialsId: 'joaquin121416@gmail.com', url: 'D:\DevOps\facturacion-web'
     }
 
     stage('Compilar') {
