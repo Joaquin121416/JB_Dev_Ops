@@ -74,6 +74,11 @@ public class EmpresaTest {
 	@Test
 	public void validacionCreacionEmpresaCuandoRazonSocialEsVacio() {
 		Empresa empresa = new Empresa();
+		Integer id = 10;
+		String ruc = "20440158877";
+		String razonSocialComercial = "JB GROUP";
+		String direccion = "Av. Aramburú 800";
+		String celular = "999999911";
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(1));
 	}
