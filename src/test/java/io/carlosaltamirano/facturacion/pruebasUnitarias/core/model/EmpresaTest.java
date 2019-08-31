@@ -76,6 +76,7 @@ public class EmpresaTest {
 		Empresa empresa = new Empresa();
 		Integer id = 10;
 		String ruc = "20440158877";
+		String razonSocial = "";
 		String razonSocialComercial = "JB GROUP";
 		String direccion = "Av. Aramburú 800";
 		String celular = "999999911";
