@@ -48,8 +48,11 @@ public class EmpresaTest {
 	@Test
 	public void validacionCreacionEmpresaCuandoRucEsVacio() {
 		Empresa empresa = new Empresa();
-		empresa.setRuc("");
-		empresa.setRazonSocial("JB ENTERPRISE GROUP");
+		Integer id = 10;
+		String razonSocial = "JB ENTERPRISE GROUP";
+		String razonSocialComercial = "JB GROUP";
+		String direccion = "Av. Aramburú 800";
+		String celular = "999999911";
 		
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(2));
@@ -58,8 +61,12 @@ public class EmpresaTest {
 	@Test
 	public void validacionCreacionEmpresaCuandoRucNoTieneOnceDigitos() {
 		Empresa empresa = new Empresa();
-		empresa.setRuc("123");
-		empresa.setRazonSocial("JB Group Enterprise");
+		Integer id = 10;
+		String ruc = "204401587";
+		String razonSocial = "JB ENTERPRISE GROUP";
+		String razonSocialComercial = "JB GROUP";
+		String direccion = "Av. Aramburú 800";
+		String celular = "999999911";
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(1));
 	}
@@ -74,7 +81,12 @@ public class EmpresaTest {
 	@Test
 	public void validacionCreacionEmpresaCuandoCelularNoTieneNueveDigitos() {
 		Empresa empresa = new Empresa();
-		empresa.setCelular("");
+		Integer id = 10;
+		String ruc = "20440158877";
+		String razonSocial = "JB ENTERPRISE GROUP";
+		String razonSocialComercial = "JB GROUP";
+		String direccion = "Av. Aramburú 800";
+		String celular = "99999991";
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(1));
 	}
