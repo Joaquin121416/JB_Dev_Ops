@@ -34,7 +34,7 @@ public class EmpresaServiceTest {
 	
 	@Before
 	public void setUp() {
-		empresa = new Empresa("22552255123", "MI EMPRESA S.A.C");
+		empresa = new Empresa();
 		empresa.setId(10);
 		empresa.setRuc("20440578921");
 		empresa.setRazonSocial("JB ENTERPRISE GROUP");
