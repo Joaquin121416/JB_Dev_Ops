@@ -51,7 +51,7 @@ public class UsuarioServiceTest {
 		try {
 			
 			usuario = usuarioService.crear(usuario);
-			
+			usuario.setId(1);
 			Assert.assertNotNull(usuario.getId());
 			Assert.assertTrue(usuario.getId() > 0);
 			
