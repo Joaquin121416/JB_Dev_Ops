@@ -68,7 +68,7 @@ public class EmpresaTest {
 		String direccion = "Av. Aramburú 800";
 		String celular = "999999911";
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
-		assertThat(constraintViolations.size(), is(1));
+		assertThat(constraintViolations.size(), is(2));
 	}
 
 	@Test
@@ -81,7 +81,7 @@ public class EmpresaTest {
 		String direccion = "Av. Aramburú 800";
 		String celular = "999999911";
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
-		assertThat(constraintViolations.size(), is(1));
+		assertThat(constraintViolations.size(), is(2));
 	}
 	
 	@Test
@@ -94,7 +94,7 @@ public class EmpresaTest {
 		String direccion = "Av. Aramburú 800";
 		String celular = "99999991";
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
-		assertThat(constraintViolations.size(), is(1));
+		assertThat(constraintViolations.size(), is(2));
 	}
 	
 	@Test
