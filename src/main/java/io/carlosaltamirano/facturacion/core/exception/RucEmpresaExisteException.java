@@ -9,8 +9,8 @@ public class RucEmpresaExisteException extends FacturacionWebException {
 		super(MENSAJE_DEFAULT);
 	}
 
-//	public RucEmpresaExisteException(String mensaje) {
-//		super(mensaje);
-//	}
+	public RucEmpresaExisteException(String mensaje) {
+		super(mensaje);
+	}
 
 }
