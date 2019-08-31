@@ -20,12 +20,22 @@ node {
 	    echo 'Ejecutando pruebas de integracion....'
 	    bat 'mvn verify -DskipUTs=true'
 	    junit '**/target/failsafe-reports/*.xml'
-	
+	}
     
   	stage ('analisis de codigo'){
 	echo 'Analisis de codigo....'
 		withSonarQubeEnv('sonar-devops'){
 		bat 'mvn sonar:sonar'
+		
+		def qg = waitForQualityGate() 
+         
+  			 if (qg.status != 'OK') {
+      
+        error "La aplicación no cumple con los estándares de calidad: ${qg.status}"
+   
+         }    
+   
+        
 		}
 	}
 
