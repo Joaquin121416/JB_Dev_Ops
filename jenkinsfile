@@ -18,7 +18,9 @@ node {
     
    stage ('Pruebas Integracion'){
 	    echo 'Ejecutando pruebas de integracion....'
-	    bat 'mvn verify -DskipUTs=true'
+	    bat 'mvn verify -DskipUTs=true' 
+	    junit '**/target/failsafe-reports/*.xml'
+	    
 	   
 	}
     
