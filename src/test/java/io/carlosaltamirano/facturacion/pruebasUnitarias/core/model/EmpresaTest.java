@@ -90,7 +90,12 @@ public class EmpresaTest {
 		String celular = "999999911";
 		
 		Empresa empresa = new Empresa();
-		//TODO: Completar
+		empresa.setId(id);
+		empresa.setRuc(ruc);
+		empresa.setRazonSocial(razonSocial);
+		empresa.setRazonSocialComercial(razonSocialComercial);
+		empresa.setDireccion(direccion);
+		empresa.setCelular(celular);
 		
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(0));
