@@ -48,9 +48,6 @@ public class UsuarioServiceTest {
 	@Test
 	public void a_creacionUsuarioConDatosValidos() {
 		
-		int num 1;
-		Assert.assertEquals(1, num);
-	/*	
 		try {
 			
 			usuario = usuarioService.crear(usuario);
@@ -62,7 +59,7 @@ public class UsuarioServiceTest {
 			e.printStackTrace();
 			Assert.fail();
 		}
-		*/
+		
 	}
 	
 	

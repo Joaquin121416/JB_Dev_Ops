@@ -56,9 +56,7 @@ public class EmpresaServiceTest {
 	
 	@Test
 	public void a_creacionEmpresaConDatosValidos() {
-		int num =1;
-		Assert.assertEquals(1, num);
-		/*
+		
 		try {
 			
 			empresa = empresaService.crear(empresa);
@@ -72,14 +70,12 @@ public class EmpresaServiceTest {
 			e.printStackTrace();
 			Assert.fail();
 		}
-		*/
+		
 	}
 	
 	@Test
 	public void b_creacionEmpresaCuandoRucExiste() {
-		int num =1;
-		Assert.assertEquals(1, num);
-	/*	
+		
 		try {
 
 			empresa = empresaService.crear(empresa);
@@ -90,7 +86,7 @@ public class EmpresaServiceTest {
 		} catch (FacturacionWebException e) {
 			Assert.fail();
 		}
-		*/
+		
 	}
 	
 	
