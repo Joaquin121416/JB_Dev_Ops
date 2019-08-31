@@ -39,6 +39,7 @@ public class EmpresaTest {
 		empresa.setCelular("123456789");
 		
 		
+		
 		Set<ConstraintViolation<Empresa>> 
 		constraintViolations = validator.validate(empresa);
 		
@@ -54,6 +55,13 @@ public class EmpresaTest {
 		String direccion = "Av. Aramburú 800";
 		String celular = "999999911";
 		
+		
+		empresa.setId(id);
+		empresa.setRazonSocial(razonSocial);
+		empresa.setRazonSocialComercial(razonSocialComercial);
+		empresa.setDireccion(direccion);
+		empresa.setCelular(celular);
+		
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(2));
 	}
@@ -67,6 +75,14 @@ public class EmpresaTest {
 		String razonSocialComercial = "JB GROUP";
 		String direccion = "Av. Aramburú 800";
 		String celular = "999999911";
+		
+		empresa.setId(id);
+		empresa.setRuc(ruc);
+		empresa.setRazonSocial(razonSocial);
+		empresa.setRazonSocialComercial(razonSocialComercial);
+		empresa.setDireccion(direccion);
+		empresa.setCelular(celular);
+		
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(2));
 	}
@@ -80,6 +96,13 @@ public class EmpresaTest {
 		String razonSocialComercial = "JB GROUP";
 		String direccion = "Av. Aramburú 800";
 		String celular = "999999911";
+		
+		empresa.setId(id);
+		empresa.setRuc(ruc);
+		empresa.setRazonSocial(razonSocial);
+		empresa.setRazonSocialComercial(razonSocialComercial);
+		empresa.setDireccion(direccion);
+		empresa.setCelular(celular);
 		Set<ConstraintViolation<Empresa>> constraintViolations = validator.validate(empresa);
 		assertThat(constraintViolations.size(), is(2));
 	}
