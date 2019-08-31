@@ -71,7 +71,7 @@ node {
         server.upload(uploadSpec) 
     
     
-    
+    }
 }
 
 
